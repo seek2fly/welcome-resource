@@ -60,3 +60,14 @@ spec:
         arguments:
           parameters:
           - resources: [welcome]
+
+    # This template runs the `z-transformation` template in the `ztransform` resource
+    - - name: transform-welcome
+        template: z-transformation
+        arguments:
+          parameters:
+          - resources: [ztransform]
+          artifacts:
+          - name: message
+            # This template takes in the output artifact from the `welcome` template.
+            from: '{{steps.greeting.outputs.artifacts.welcome}}'
