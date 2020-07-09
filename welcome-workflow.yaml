@@ -11,19 +11,13 @@ resources:
 - name: welcome
   type: git
   parameters:
-    url: "git@github.com:<your-github-username>/<your-git-repo-name>.git"
+    url: "git@github.com:seek2fly/welcome-resource.git"
     branch: "master"
 
 - name: ztransform
   type: git
   parameters:
     url: "git@github.com:zapatacomputing/tutorial-0-ztransform.git"
-    branch: "master"
-# A resource named `welcome` that is a public git repo. All the fields here are required except branch, which defaults to master.
-- name: welcome
-  type: git
-  parameters:
-    url: "git@github.com:seek2fly/welcome-resource.git"
     branch: "master"
 
 # Data to help you easily work with your workflow
